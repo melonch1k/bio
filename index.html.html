@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashenfold | Bio</title>
+  <style>
+    :root {
+      --bg: #0b0d10;
+      --card-bg: rgba(22, 27, 34, 0.8);
+      --accent: #ff4757;
+      --accent-glow: rgba(255, 71, 87, 0.35);
+      --text: #f0f6fc;
+      --text-muted: #8b949e;
+      --border: rgba(240, 246, 252, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(255, 71, 87, 0.12) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(30, 41, 59, 0.5) 0px, transparent 50%);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      width: 100%;
+      max-width: 420px;
+      padding: 36px 28px;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    }
+
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), #ff6b81);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 38px;
+      margin: 0 auto 16px;
+      box-shadow: 0 0 25px var(--accent-glow);
+    }
+
+    h1 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.8rem;
+      color: var(--accent);
+      background: rgba(255, 71, 87, 0.1);
+      border: 1px solid rgba(255, 71, 87, 0.25);
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 24px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border);
+      color: var(--text);
+      text-decoration: none;
+      padding: 14px 18px;
+      border-radius: 14px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: rgba(255, 71, 87, 0.12);
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(255, 71, 87, 0.15);
+    }
+
+    .btn-copy {
+      background: linear-gradient(135deg, rgba(255, 71, 87, 0.15), rgba(255, 71, 87, 0.05));
+      border-color: rgba(255, 71, 87, 0.3);
+    }
+
+    .footer {
+      margin-top: 28px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="avatar">⚡</div>
+    <h1>Ashenfold</h1>
+    <div class="badge">Minecraft Project & Bio</div>
+
+    <div class="links">
+      <div class="btn btn-copy" onclick="copyIP()">
+        <span>🎮 Скопировать IP: <b>ashenfold.fun</b></span>
+      </div>
+      <a href="https://t.me/" target="_blank" class="btn">
+        ✈️ Telegram
+      </a>
+      <a href="https://discord.gg/" target="_blank" class="btn">
+        💬 Discord сообщество
+      </a>
+      <a href="https://vk.com/" target="_blank" class="btn">
+        🌐 Группа ВКонтакте
+      </a>
+    </div>
+
+    <div class="footer">
+      ashenfold.fun • 2026
+    </div>
+  </div>
+
+  <script>
+    function copyIP() {
+      navigator.clipboard.writeText('ashenfold.fun').then(() => {
+        alert('IP скопирован в буфер обмена: ashenfold.fun');
+      });
+    }
+  </script>
+</body>
+</html>
